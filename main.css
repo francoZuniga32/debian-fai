@@ -1,0 +1,93 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100%;
+    background-image: url("Media/back1.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.navbar{
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+}
+.navbar .logo{
+    height: 50px;
+}
+
+.navbar ul li a{
+    color: black;
+    text-align: center;
+}
+
+.navbar ul li a img{
+    width: 40px;
+    margin: 10px;
+}
+
+
+/* las listas con guion del menu*/
+
+.listaguion.mayor{
+    position: fixed;
+    height: 100%;
+    font-size: 10pt;
+}
+
+.listaguion li{
+    list-style-type: none;
+}
+.listaguion li:before{content: "-"}
+
+/* los estilos de los encabezados */
+
+h2, h3, h5{
+    justify-content: center;
+    text-align: center;
+}
+
+.row{
+    margin-bottom: 5%;
+}
+
+.centro{
+    padding-top: 1%;
+}
+
+.contenido{
+    margin-left: 25%;
+}
+
+/* tamaño de los iconos */
+
+.material-icons.md-18 { 
+    font-size: 20px; 
+}
+
+footer{
+    background-color: #050505;
+    font-family: 'Arbutus Slab', serif;
+}
+
+footer ul li{
+    color: #E5E5E5;
+    
+}
+
+footer ul li a{
+    color: #E5E5E5;
+}
+
+footer ul li a:hover{
+    color: #E5E5E5;
+}
+
+@media (max-width: 769px){
+    .img{
+        display: none;
+    }
+}
