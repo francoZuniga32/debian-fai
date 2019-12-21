@@ -46,9 +46,10 @@ body{
 
 /* los estilos de los encabezados */
 
-h2, h3, h5{
+h1, h2, h3, h5{
     justify-content: center;
     text-align: center;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .row{
@@ -61,12 +62,20 @@ h2, h3, h5{
 
 /*contenido del manual*/
 
+a{
+    vertical-align: middle;
+}
+
 .contenido{
     margin-left: 25%;
 }
 
 .contenido h2, h3, h5{
     text-align: left;
+}
+
+.contenido p{
+    text-indent: 5pt;
 }
 
 /**/
