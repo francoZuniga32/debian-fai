@@ -34,8 +34,9 @@ body{
 
 .listaguion.mayor{
     position: fixed;
-    height: 100%;
+    height: 95%;
     font-size: 10pt;
+    margin-bottom: 5%;
 }
 
 .listaguion li{
