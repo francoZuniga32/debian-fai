@@ -58,8 +58,20 @@ h2, h3, h5{
     padding-top: 1%;
 }
 
+/*contenido del manual*/
+
 .contenido{
     margin-left: 25%;
+}
+
+.contenido h2, h3, h5{
+    text-align: left;
+}
+
+/**/
+
+.subir{
+    display: none;
 }
 
 /* tamaño de los iconos */
@@ -89,5 +101,27 @@ footer ul li a:hover{
 @media (max-width: 769px){
     .img{
         display: none;
+    }
+}
+
+@media (max-width: 425px){
+    .listaguion.mayor{
+        position: relative;
+    }
+
+    .contenido{
+        margin: 0;
+    }
+
+    .subir{
+        display:block;
+        background-repeat:no-repeat;
+        font-size:20px;
+        color:black;
+        cursor:pointer;
+        position:fixed;
+        bottom:10px;
+        right:10px;
+        z-index:2;
     }
 }
