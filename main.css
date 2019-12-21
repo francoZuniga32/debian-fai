@@ -74,6 +74,10 @@ h2, h3, h5{
     display: none;
 }
 
+.white{
+    color: #fff;
+}
+
 /* tamaño de los iconos */
 
 .material-icons.md-18 { 
