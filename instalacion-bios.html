@@ -138,6 +138,43 @@
           <!-- EL CONTENIDO VA AQUI -->
           
           <h1>Instalacion BIOS</h1>
+          <hr>
+          <h2>Configuración del setup</h2>
+          <p>Antes de proceder con la instalación será necesario realizar algunas configuraciones en el setup. ingrese al setup y realice las siguientes operaciones:</p>
+          <ol>
+            <li>boot > boot mode: LEGACY</li>
+            <li>boot > usb boot: Habilitado</li>
+            <li>fast boot: Deshabilitado</li>
+            <li>seguridad > secure boot: Deshabilitado
+                ó seguridad > secure boot configuration > secure boot opción: desactivado </li>
+          </ol>
+          <h2>Debian-fai como sistema único</h2>
+          <ol>
+            <li>Seleccionar la opción <strong>“Instalar Sistema”</strong>.</li>
+            <li>Completar datos del usuario. 
+                Importante: establecer una contraseña de root.</li>
+            <li>Identificar el disco donde se instalará el sistema, por ejemplo, en este caso “/dev/sda”:</li>
+            <li><p>Crear las particiones necesarias para el sistema, como mínimo 2:</p>
+                <p>- una partición para el área de intercambio “swap” a la cuál se recomienda darle el doble del tamaño de la ram.</p>
+                <p>- una partición para el sistema raíz “/” que tendrá una dimensión mínima de 40 GB.</p>
+                <p><span class="badge badge-warning">Nota:</span> se recomienda crear una partición extra para los datos del usuario “/home” que aloje los datos de usuario.</p></li>
+            <li>Seleccionar el disco donde se instalará el gestor de arranque, en este caso “/dev/sda” y pulsar “siguiente”.</li>
+            <li>Iniciar la instalación.</li>
+            <li>Cuando la instalación finaliza se muestra el siguiente mensaje:</li>
+            <li>Una vez hecho esto reiniciar el equipo y extraer el pendrive.</li>
+          </ol>
+          <h2>Debian-fai junto con otro sistema operativo</h2>
+          <ol>
+            <li>Abrir la aplicación Gparted, ingresar como contraseña: “usuario”.
+                Sistema -> Administración -> GParted</li>
+            <li>Identificar una partición con espacio disponible. En este caso, utilizamos la partición “/dev/sdg2” que tiene disponibles 435GB. Dicha partición, tiene instalado el sistema operativo Windows 7, el cual deseamos conservar.</li>
+            <li>Una vez identificada la partición objetivo, procedemos a redimensionarla para reducir el volumen y obtener así una nueva partición donde se podrá instalar el sistema.</li>
+            <li>En este caso reducimos el volumen en 100GB, de manera que se puedan destinar 4GB como memoria de intercambio “swap” y los restantes 96GB para el sistema operativo debian-fai.</li>
+            <li>Luego de redimensionar la partición, aparecerá un nuevo espacio “sin asignar”, deberá hacer click en la tilde verde para aplicar los cambios.</li>
+            <li>Si el proceso fue exitoso se mostrará el siguiente mensaje:</li>
+            <li><p>Para continuar, deberá cerrar la aplicación GParted, como indica la imagen anterior.</p>
+                <p>En este momento, deberá iniciar con los pasos de la Opción 1, instalando debian-fai en la partición que hemos liberado con ese objetivo.</p></li>
+          </ol>
           <!-- +++++++++++++++++++++++++++++++++ -->
           
           <!-- los botones de las guias-->

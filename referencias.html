@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Debian-FAI</title>
+    <title>Debian-FAI documentacion</title>
     <link rel="icon" type="image/png" href="Media/icono.png">
-
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" href="#">Inicio</a>
+              <a class="nav-link" href="index.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Documentacion</a>
@@ -70,13 +70,13 @@
                   <div class="collapse" id="UEFI">
                     <ul class="listaguion">
                       <li>
-                        <a href="">Configuración del setup</a>
+                        <a href="instalacion-uefi.html#setup">Configuración del setup</a>
                       </li>
                       <li>
-                        <a href="">Debian-fai como sistema único</a>
+                        <a href="instalacion-uefi.html#unico">Debian-fai como sistema único</a>
                       </li>
                       <li>
-                        <a href="">Debian-fai junto con otro sistema operativo</a>
+                        <a href="instalacion-uefi.html#otros">Debian-fai junto con otro sistema operativo</a>
                       </li>
                     </ul>
                   </div>
@@ -121,90 +121,39 @@
           <!-- los botones de las guias-->
           <div class="row">
             <div class="col">
-                <a role="button" class="btn" href="acceso-bios.html">
-                <i class="material-icons">
-                    keyboard_arrow_left
-                </i>
-                </a>
+              
             </div>
             <div class="col d-flex justify-content-end">
-            <a role="button" class="btn" href="grub.html#">
+              <a role="button" class="btn align-middle" href="acceso-bios.html">
                 <i class="material-icons">
-                keyboard_arrow_right
+                  keyboard_arrow_right
                 </i>
-            </a>
+              </a>
             </div>
           </div>
           <!---->
           
           <!-- EL CONTENIDO VA AQUI -->
           
-            <h1>Instalacion UEFI</h1>
-            <hr>
-            <h2 id="setup">Configuración del setup</h2>
-            <p>Antes de proceder con la instalación será necesario realizar algunas configuraciones en el setup. 
-                Ingresar y realizar las siguientes operaciones:</p>
-            <ol>
-                <li>boot > boot mode: UEFI</li>
-                <li>boot > usb boot: Habilitado</li>
-                <li>fast boot: Deshabilitado</li>
-                <li>guridad > secure boot: Deshabilitado ó seguridad > secure boot configuration > secure boot opción: desactivado</li>
-            </ol>
-            <p><span class="badge badge-warning">Nota:</span> en ocasiones será necesario establecer una contraseña de administración para que se puedan realizar los cambios. </p>
+          <h1>Referencias</h1>
+          <hr>
+          <p>Este es el manual de instalación de Debian-fai, Proyecto llevado a cabo por el Departamento de 
+            TIC de la Facultad de Informática 
+            y el grupo divulgador de tecnologías libres Mountun. 
+            En este manual tendrá todos los pasos detallados del proceso de instalación del sistema operativo. 
+            Esperamos que le sea de utilidad.</p>
           
-            <h2 id="unico">Debian-fai como sistema único</h2>
-            <ol>
-                <li>Abrir la aplicación Gparted, ingresar como contraseña: “usuario”. Sistema -> Administración -> GParted</li>
-                <li>Crear tabla de particiones nueva, seleccionar “gpt” y aceptar.</li>
-                <li>Crear una partición fat32 de 100MB (Mínimo), con opciones “boot” y “esp”.</li>
-                <li>También desde gparted se pueden crear las demas particiones: sistema raíz, swap, home (opcional). Caso contrario deberán crearse durante la instalación.</li>
-                <li>Hacer doble click sobre <strong>“Instalar Sistema”</strong> e ingresar como contraseña: usuario </li>
-                <li> Seleccionar la opción “Instalar Sistema”.</li>
-                <li>Completar datos del usuario. Importante: establecer una contraseña de root.</li>
-                <li>Identificar el disco donde se instalará el sistema, por ejemplo, en este caso “/dev/sda”:</li>
-                <li><p>Crear las particiones necesarias para el sistema, como mínimo 2:</p>
-                    <p>- una partición para el área de intercambio “swap” a la cuál se recomienda darle el doble del tamaño de la ram. </p>
-                    <p>- una partición para el sistema raíz “/” que tendrá una dimensión mínima de 40 GB.</p>
-                </li>
-                <li><span class="badge badge-warning">Nota:</span> se recomienda crear una partición extra para los datos del usuario “/home” que aloje los datos de usuario.</li>
-                <li>Seleccionar el disco donde se instalará el gestor de arranque, en este caso “/dev/sda” y pulsar “siguiente”.</li>
-                <li>Iniciar la instalación.</li>
-                <li>Cuando la instalación finaliza se muestra el siguiente mensaje:</li>
-                <li>A partir de aquí el sistema estará instalado, solo resta configurar el grub para un correcto arranque, los pasos para lograrlo se describen en la sección instalación de grub uefi más adelante.</li>
-                <li>Una vez hecho esto reiniciar el equipo y extraer el pendrive.</li>
-            </ol>
-            <h2 id="otro">Debian-fai junto con otro sistema operativo</h2>
-            <ol>
-              <li>Abrir la aplicación Gparted, ingresar como contraseña: “usuario”.
-                  Sistema -> Administración -> GParted</li>
-              <li>Procedemos a redimensionar la partición donde tenemos instalado el sistema operativo que deseamos mantener para reducir el volumen y obtener así una nueva partición donde se podrá instalar el sistema(mínimo 50 gb).</li>
-              <li>Hacer doble click sobre “Instalar Sistema” e ingresar como contraseña: “usuario”.</li>
-              <li>Seleccionar la opción “Instalar Sistema”.</li>
-              <li>Completar datos del usuario. 
-                  Importante: establecer una contraseña de root.</li>
-              <li>Identificar el disco donde se instalará el sistema, por ejemplo, en este caso “/dev/sda”:</li>
-              <li><p>Crear las particiones necesarias para el sistema, como mínimo 2:</p>
-                  <p>- una partición para el área de intercambio “swap” a la cuál se recomienda darle el doble del tamaño de la ram.</p></li>
-                  <p>- una partición para el sistema raíz “/” que tendrá una dimensión mínima de 40 GB.</p>
-                  <p><span class="badge badge-warning">Nota:</span> se recomienda crear una partición extra para los datos del usuario “/home” que aloje los datos de usuario, lo cuál implica reducir la partición del SO que se desea conservar en más de 50 gb.</p>
-              <li>Iniciar la instalación.</li>
-              <li>Cuando la instalación finaliza se muestra el siguiente mensaje:</li>
-              <li>A partir de aquí el sistema estará instalado, solo resta configurar el grub para un correcto arranque, los pasos para lograrlo se describen en la sección instalación de grub uefi más adelante.</li>
-              <li>Una vez hecho esto reiniciar el equipo y extraer el pendrive.</li>
-            </ol>
+          <p style="text-align: end;">TIC Facultad de Informatica, Mountun</p>
+          <h2>Prueva del sistema</h2>
           <!-- +++++++++++++++++++++++++++++++++ -->
           
           <!-- los botones de las guias-->
           <div class="row">
             <div class="col">
-                <a role="button" class="btn" href="acceso-bios.html">
-                    <i class="material-icons">
-                        keyboard_arrow_left
-                    </i>
-                </a>
+             
             </div>
             <div class="col d-flex justify-content-end">
-              <a role="button" class="btn" href="grub.html#">
+              <a role="button" class="btn align-middle" href="acceso-bios.html">
                 <i class="material-icons">
                   keyboard_arrow_right
                 </i>
@@ -217,7 +166,7 @@
     <footer>
       
     </footer>
-    <a href="#menu" class="btn btn-primary subir rounded" role="button" href="acceso-bios.html">
+    <a href="#menu" class="btn btn-primary subir rounded" role="button">
         <i class="material-icons white">
         arrow_upward
         </i>

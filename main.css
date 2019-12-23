@@ -37,6 +37,8 @@ body{
     height: 95%;
     font-size: 10pt;
     margin-bottom: 5%;
+    font-family: 'Roboto Mono', monospace;
+    margin-left: 1%;
 }
 
 .listaguion li{
@@ -58,8 +60,12 @@ h1, h2, h3, h5{
 
 .centro{
     padding-top: 1%;
+    font-family: 'Roboto', sans-serif;
 }
 
+code{
+    color: rgb(87, 87, 87);
+}
 /*contenido del manual*/
 
 a{
@@ -72,10 +78,19 @@ a{
 
 .contenido h2, h3, h5{
     text-align: left;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .contenido p{
     text-indent: 5pt;
+}
+
+button{
+    vertical-align: middle;
+}
+
+i{
+    vertical-align: middle;
 }
 
 /**/
