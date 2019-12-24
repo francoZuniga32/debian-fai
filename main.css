@@ -171,8 +171,6 @@ footer ul li a:hover{
     }
 
     .contenido img{
-        width: 100%;
-        height: auto;
-        min-width: 300px;
+        width: 60%;
     }
 }
