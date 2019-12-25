@@ -119,24 +119,6 @@ i{
     font-size: 20px; 
 }
 
-footer{
-    background-color: #050505;
-    font-family: 'Arbutus Slab', serif;
-}
-
-footer ul li{
-    color: #E5E5E5;
-    
-}
-
-footer ul li a{
-    color: #E5E5E5;
-}
-
-footer ul li a:hover{
-    color: #E5E5E5;
-}
-
 @media (max-width: 769px){
     .img{
         display: none;
