@@ -119,6 +119,12 @@ i{
     font-size: 20px; 
 }
 
+/* pie de pagina */
+ 
+footer p{
+    size: 9px;
+}
+
 @media (max-width: 769px){
     .img{
         display: none;
