@@ -53,8 +53,8 @@
         </div>
       </nav>
       <div class="container">
-          <h1>Descargas</h1>
-          <div class="row">
+          <h1><span class="bg-white">Descargas</span></h1>
+          <div class="row bg-white">
               <div class="col">
                 <a class="btn" href="https://drive.google.com/drive/folders/1eits6DWyD4n_csEL1WTRV3Mt1IIVS_Jv?usp=sharing" role="button">
                     Vesion_1
@@ -75,26 +75,26 @@
           <hr>
           <div class="row">
             <div class="col">
-                <h2>bootear en windows</h2>
-                <p>para poder grabar la imagen raw en un pendrive, tenemos que:</p>
-                <ol>
-                    <li>Descargamos ImageWriter para Windows en este enlace: <a href="https://sourceforge.net/projects/win32diskimager/">win32diskimager</a></li>
+                <h2><span class="bg-white">bootear en windows</span></h2>
+                <p><span class="bg-white">para poder grabar la imagen raw en un pendrive, tenemos que:</span></p>
+                <ol class="bg-white">
+                    <li>Descargamos ImageWriter para Windows en este enlace: <a href="https://sourceforge.net/projects/win32diskimager/">win32diskimager</a></li >
                     <li>Arrancamos ImageWriter, seleccionamos la imagen ( archivo .image ) y seleccionamos la unidad donde la volcaremos. <span style="color: #EB5757;">¡OJO CON LA SELECCIÓN DE UNIDAD!</span></li>
                     <li>Ya tenemos listo nuestro pendrive con la última compilación disponible, listo para ser enchufado en cualquier pc que nos permita arrancar desde usb.</li>
                 </ol>
-                <p>luego de esto podremos reiniciar la PC. y continuar con la <a href="documentacion.html">instalación</a></p>
+                <p><span class="bg-white">luego de esto podremos reiniciar la PC. y continuar con la <a href="documentacion.html">instalación</a></span></p>
             </div>
           </div>
           <div class="row">
             <div class="col">
-                <h2>bootear en linux</h2>
-                <p>Para grabar en el pendrive, utilizar el comando “dd”:</p>
-                <code>
+                <h2><span class="bg-white">bootear en linux</span></h2>
+                <p><span class="bg-white">Para grabar en el pendrive, utilizar el comando “dd”:</span></p>
+                <code class="bg-white">
                     $ dd if=/lugar/de/origen/debian-fai_v1-1.raw of=/dev/sdx bs=1M; sync
                 </code>
-                <p>donde sdx es el pendrive</p>
-                <p>para ver el progreso instalar previamente “pv”:</p>
-                <code>
+                <p><span class="bg-white">donde sdx es el pendrive</span></p>
+                <p><span class="bg-white">para ver el progreso instalar previamente “pv”:</span></p>
+                <code class="bg-white">
                     $ apt-get install pv <br>
                     $ dd if=/lugar/de/origen/debian-fai_v1-1.raw |pv|dd of=/dev/sdx bs=1M; sync
                 </code>
