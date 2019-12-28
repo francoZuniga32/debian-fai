@@ -4,7 +4,7 @@ html {
 
 body{
     height: 100%;
-    background-image: url("Media/back1.jpg");
+    background-image: url("Media/backgraund.png");
     background-size: 100%;
     background-attachment: fixed;
     font-family: 'Roboto Mono', monospace;
@@ -51,7 +51,7 @@ body{
 h1, h2, h3, h5{
     justify-content: center;
     text-align: center;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Space Mono', monospace;
 }
 
 .row{
@@ -60,6 +60,9 @@ h1, h2, h3, h5{
 
 .centro{
     padding-top: 1%;
+    height: 100%;
+    margin-bottom: 0px;
+    background-color: #fff;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -74,6 +77,7 @@ a{
 
 .contenido{
     margin-left: 25%;
+    background-color: #fff;
 }
 
 .contenido h2, h3, h5{
@@ -119,8 +123,34 @@ i{
     font-size: 20px; 
 }
 
+/* entrada */
+.entrada{
+    margin: auto;
+    width: 80%;
+    margin-bottom: 5%;
+}
+
+.entrada .fecha , .text{
+    background-color: rgba(255, 255, 255, 0.76);
+}
+
+.entrada .fecha{
+    margin-bottom: 40%;
+}
+
 /* pie de pagina */
- 
+
+footer{
+    width: 100%;
+    position: absolute;
+    margin-bottom: 0px;
+    background-color: #fff;
+}
+
+.footer-style {
+    padding-top: 50px;
+}
+
 footer p{
     size: 9px;
 }
@@ -143,6 +173,7 @@ footer p{
     }
 
     .contenido{
+        widows: 100%;
         margin: 0;
     }
 
@@ -159,6 +190,6 @@ footer p{
     }
 
     .contenido img{
-        width: 60%;
+        width: 50%;
     }
 }
