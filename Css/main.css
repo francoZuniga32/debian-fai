@@ -1,0 +1,35 @@
+.v1{
+    border-radius: 1px;
+    border-color:rgba(235, 87, 87, 0.73);
+    color:rgba(235, 87, 87, 0.73);
+}
+
+.v1:hover{
+    border-radius: 1px;
+    background-color:rgba(235, 87, 87, 0.73);
+    color:#fff;
+}
+
+.v2{
+    border-radius: 1px;
+    border-color:#F9B376;
+    color: #F9B376;
+}
+
+.v2:hover{
+    border-radius: 1px;
+    background-color:#F9B376;
+    color: #fff;
+}
+
+.v3{
+    border-radius: 1px;
+    border-color:rgba(101, 198, 255, 0.73);
+    color:rgba(101, 198, 255, 0.73);
+}
+
+.v3:hover{
+    border-radius: 1px;
+    background-color: rgba(101, 198, 255, 0.73);
+    color: #fff;
+}
