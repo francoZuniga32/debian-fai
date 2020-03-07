@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Debian-FAI</title>
+    <link rel="icon" type="image/png" href="../Media/icono.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="../Css/darck.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../Css/darck.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+          <img src="../Media/logo.png" alt="" width="30px">Debian-FAI
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="documentacion.html">Documentacion</a>
+            </li>
+            <li class="nav-item">
+              <a href="descarga.html" class="nav-link">Descargas</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+          <h1><span>Descargas</span></h1>
+          <div class="row">
+              <div class="col-sm  d-flex justify-content-center">
+                <a class="btn v1" href="https://drive.google.com/drive/folders/1eits6DWyD4n_csEL1WTRV3Mt1IIVS_Jv?usp=sharing" role="button">
+                    V_1
+                    <i class="material-icons">
+                    save_alt
+                    </i>
+                </a>
+              </div>
+              <div class="col-sm d-flex justify-content-center">
+                <a class="btn v2" href="https://drive.google.com/open?id=1EfZSwvtLiN0NM0sO0FlDiCqfb9Z4aTVE" role="button">
+                    V_2 ML
+                    <i class="material-icons">
+                    save_alt
+                    </i>
+                </a>
+              </div>
+              <div class="col-sm  d-flex justify-content-center">
+                <a class="btn v3" href="https://drive.google.com/drive/folders/1OHL2rJUCoEUhqAa-Zio8rUQ-gYb6e9Cw" role="button">
+                    V_3 lite
+                    <i class="material-icons">
+                    save_alt
+                    </i>
+                </a>
+              </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col">
+                <h2><span>bootear en windows</span></h2>
+                <p><span>para poder grabar la imagen raw en un pendrive, tenemos que:</span></p>
+                <ol class="text-white">
+                    <li>Descargamos ImageWriter para Windows en este enlace: <a href="https://sourceforge.net/projects/win32diskimager/">win32diskimager</a></li >
+                    <li>Arrancamos ImageWriter, seleccionamos la imagen ( archivo .image ) y seleccionamos la unidad donde la volcaremos. <span style="color: #EB5757;">¡OJO CON LA SELECCIÓN DE UNIDAD!</span></li>
+                    <li>Ya tenemos listo nuestro pendrive con la última compilación disponible, listo para ser enchufado en cualquier pc que nos permita arrancar desde usb.</li>
+                </ol>
+                <p><span>luego de esto podremos reiniciar la PC. y continuar con la <a href="documentacion.html">instalación</a></span></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                <h2><span>bootear en linux</span></h2>
+                <p><span>Para grabar en el pendrive, utilizar el comando “dd”:</span></p>
+                <code>
+                    $ dd if=/lugar/de/origen/debian-fai_v1-1.raw of=/dev/sdx bs=1M; sync
+                </code>
+                <p><span>donde sdx es el pendrive</span></p>
+                <p><span>para ver el progreso instalar previamente “pv”:</span></p>
+                <code>
+                    $ apt-get install pv <br>
+                    $ dd if=/lugar/de/origen/debian-fai_v1-1.raw |pv|dd of=/dev/sdx bs=1M; sync
+                </code>
+            </div>
+          </div>
+      </div>
+      <footer class="">
+        <div class="row">
+          <div class="col-sm">
+            <h5 class="text-center"><u>Autores</u></h5>
+            <p style="margin-left: 2%;">Desarrollador web: Franco Agustin Ojeda Zuñiga.</p>
+            <p style="margin-left: 2%;">Desarrolladores distro: Alejandro Mora, Luis Corolle.</p>
+            <p style="margin-left: 2%;">Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+          </div>
+          <div class="col-sm">
+            <h5 class="text-center"><u>Grupos</u></h5>
+            <div class="media" style="margin-left: 2%;">
+              <img src="../Media/fai-logo.png" class="align-self-center mr-3" alt="..." width="40px">
+              <div class="media-body">
+                <h5 class="mt-0">Facultad de Informática</h5>
+              </div>
+            </div>
+            <br>
+            <div class="media" style="margin-left: 2%;">
+              <img src="../Media/montun-logo.png" class="align-self-center mr-3" alt="..." width="40px">
+              <div class="media-body">
+                <h5 class="mt-0">Montun</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm ">
+            <h5 class="text-center"><u>Contacto</u></h5>
+            <a href="https://t.me/Montun">
+              <div class="media" style="margin-left: 2%;">
+                <img src="../Media/telegram.png" class="align-self-center mr-3" alt="..." width="40px">
+                <div class="media-body">
+                  <h5 class="mt-0">Grupo de Telegram</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <p class="text-center">
+          
+        </p>
+      </footer>
+</body>
+</html>

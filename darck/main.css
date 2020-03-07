@@ -1,0 +1,195 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100%;
+    /*background-image: url("Media/backgraund.png");*/
+    background-size: 100%;
+    background-attachment: fixed;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.navbar{
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+}
+.navbar .logo{
+    height: 50px;
+}
+
+.navbar ul li a{
+    color: black;
+    text-align: center;
+}
+
+.navbar ul li a img{
+    width: 40px;
+    margin: 10px;
+}
+
+
+/* las listas con guion del menu*/
+
+.listaguion.mayor{
+    position: fixed;
+    height: 95%;
+    font-size: 10pt;
+    margin-bottom: 5%;
+    font-family: 'Roboto Mono', monospace;
+    margin-left: 1%;
+}
+
+.listaguion li{
+    list-style-type: none;
+}
+.listaguion li:before{content: "-"}
+
+/* los estilos de los encabezados */
+
+h1, h2, h3, h5{
+    justify-content: center;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+}
+
+.row{
+    margin-bottom: 5%;
+}
+
+.centro{
+    padding-top: 1%;
+    height: 100%;
+    margin-bottom: 0px;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+code{
+    color: rgb(87, 87, 87);
+}
+/*contenido del manual*/
+
+a{
+    vertical-align: middle;
+}
+
+.contenido{
+    margin-left: 25%;
+    background-color: #fff;
+}
+
+.contenido h2, h3, h5{
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.contenido p{
+    text-indent: 5pt;
+}
+
+.contenido img{
+    width: auto;
+    height: auto;
+    min-width: 300px;
+}
+
+button{
+    vertical-align: middle;
+}
+
+i{
+    vertical-align: middle;
+}
+
+/**/
+
+.subir{
+    display: none;
+}
+
+.subir i{
+    margin-bottom: 20%;
+}
+
+.white{
+    color: #fff;
+}
+
+/* tamaño de los iconos */
+
+.material-icons.md-18 { 
+    font-size: 20px; 
+}
+
+/* entrada */
+.entrada{
+    margin: auto;
+    width: 80%;
+    margin-bottom: 5%;
+}
+
+.entrada .fecha , .text{
+    background-color: rgba(255, 255, 255, 0.76);
+}
+
+.entrada .fecha{
+    margin-bottom: 40%;
+}
+
+/* pie de pagina */
+
+footer{
+    width: 100%;
+    position: absolute;
+    margin-bottom: 0px;
+    background-color: #fff;
+}
+
+.footer-style {
+    padding-top: 50px;
+}
+
+footer p{
+    size: 9px;
+}
+
+@media (max-width: 769px){
+    .img{
+        display: none;
+    }
+
+    .contenido img{
+        width: 90%;
+        height: auto;
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 425px){
+    .listaguion.mayor{
+        position: relative;
+    }
+
+    .contenido{
+        widows: 100%;
+        margin: 0;
+    }
+
+    .subir{
+        display:block;
+        background-repeat:no-repeat;
+        font-size:20px;
+        color:black;
+        cursor:pointer;
+        position:fixed;
+        bottom:10px;
+        right:10px;
+        z-index:2;
+    }
+
+    .contenido img{
+        width: 50%;
+    }
+}

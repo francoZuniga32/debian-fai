@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Debian-FAI documentacion</title>
+    <link rel="icon" type="image/png" href="../Media/icono.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="../Css/darck.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" id="menu">
+        <a class="navbar-brand" href="#">
+          <img src="../Media/logo.png" alt="" width="30px">Debian-FAI
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="documentacion.html">Documentacion</a>
+            </li>
+            <li class="nav-item">
+              <a href="descarga.html" class="nav-link">Descargas</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container-fluid centro">
+      <div class="row">        
+        <ul class="nav flex-column col-sm-3 listaguion mayor">
+          <h3>Manual</h3>
+          <hr>
+          <li>
+            <a href="documentacion.html">Inicio</a>
+          </li>
+          <li class="">
+            <a class="" href="acceso-bios.html">Acceso al UEFI/BIOS</a>
+          </li>
+          <li class="">
+            <a class="" data-toggle="collapse" href="#collapseExample">Instalación</a>
+            <div class="collapse" id="collapseExample">
+              <ul class="listaguion">
+                <li>
+                  <a class="" data-toggle="collapse" href="#UEFI">Instalación en modo UEFI</a>
+                  <div class="collapse" id="UEFI">
+                    <ul class="listaguion">
+                      <li>
+                        <a href="">Configuración del setup</a>
+                      </li>
+                      <li>
+                        <a href="">Debian-fai como sistema único</a>
+                      </li>
+                      <li>
+                        <a href="">Debian-fai junto con otro sistema operativo</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a class="" data-toggle="collapse" href="#BIOS">Instalación en modo BIOS</a>
+                  <div class="collapse" id="BIOS">
+                    <ul class="listaguion">
+                      <li>
+                        <a href="">Configuración del setup</a>
+                      </li>
+                      <li>
+                        <a href="">Debian-fai como sistema único</a>
+                      </li>
+                      <li>
+                        <a href="">Debian-fai junto con otro sistema operativo</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+              <a data-toggle="collapse" href="#GRUB">Instalacion de GRUB</a>
+              <div class="collapse" id="GRUB">
+                <ul class="listaguion">
+                  <li>
+                    <a href="">Instalación del grub en UEFI</a>
+                  </li>
+                  <li>
+                    <a href="">Instalación del grub en BIOS</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          <li>
+            <a href="">Referencias</a>
+          </li>
+        </ul>
+        <div class="col-sm contenido">
+          <!-- los botones de las guias-->
+          <div class="row">
+            <div class="col">
+                <a role="button" class="btn text-white" href="instalacion-uefi.html">
+                  <i class="material-icons text-white">
+                    keyboard_arrow_left
+                  </i>
+                  UEFI
+                </a>
+            </div>
+            <div class="col d-flex justify-content-end">
+              <a role="button" class="btn" href="referencias.html">
+                <i class="material-icons text-white">
+                  keyboard_arrow_right
+                </i>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                <a role="button" class="btn text-white" href="instalacion-bios.html">
+                  <i class="material-icons text-white">
+                    keyboard_arrow_left
+                  </i>
+                  BIOS
+                </a>
+              </div>
+          </div>
+          <!---->
+          
+          <!-- EL CONTENIDO VA AQUI -->
+          
+          <h1>GRUB</h1>
+          <hr>
+          <h2 id="UEFI">Instalación del grub en UEFI</h2>
+          <p>Hace algunos años apareció el firmware UEFI reemplazando al firmware BIOS 
+            y sus limitaciones (discos de máximo 2TB, máximo 4 particiones, falta de espacio en el
+             MBR para el cargador de arranque, etc.). Todas las motherboard actuales tienen firmware UEFI y 
+            la mayoría es compatible con el modo BIOS (normalmente llamado CSM o Legacy).</p>
+          <p>Si se va a instalar debian-fai como sistema único, simplemente deberá habilitar 
+            la compatibilidad con el modo BIOS. Pero, si desea conservar el sistema operativo actual 
+            con el firmware en modo UEFI, procederemos con los siguientes pasos:
+            </p>
+          <ol>
+            <li>
+              <p>Lo primero es arrancar debian-fai en modo LIVE. A continuación, deberá identificar la partición EFI, usando la aplicación GParted. 
+                Se trata de una partición FAT32, con la marca de arranque “boot”, que normalmente tiene la etiqueta “EFI”. </p>
+              <p><span class="badge badge-warning">Importante:</span> si se daña esta partición, la computadora no arrancará y habrá que reparar la partición.</p>
+              <p>En la imagen anterior, la partición EFI es “/dev/sda1” y el sistema debian-fai se encuentra en “/dev/sda6”. Identificado esto, debe proceder a instalar el Grub, utilizando el método chroot (CHange ROOT).</p>
+
+            </li>
+            <li>
+              <p>Montar la partición raíz <strong>“/”</strong> de Linux, en este caso: <strong>“/dev/sda6”</strong>.</p>
+              <code>
+                $ mount /dev/sda6 /mnt
+              </code>
+            </li>
+            <li>
+              <p>Crear el directorio <strong>“efi”</strong> (si no existe) en la partición raíz montada.</p>
+              <code>
+                $ mkdir /mnt/boot/efi
+              </code>
+            </li>
+            <li>
+              <p>Montar la partición <strong>EFI</strong>r dentro de la partición raíz que acabamos de montar.</p>
+              <code>
+                  mount /dev/sda1 /mnt/boot/efi/
+              </code>
+            </li>
+            <li>
+              <p>Enlazar directorios especiales de Linux dentro de la partición raíz que hemos montado.</p>
+              <code>
+                  $ mount -t proc /proc /mnt/proc <br>
+                  $ mount --bind /dev /mnt/dev<br>
+                  $ mount --bind /dev/pts /mnt/dev/pts<br>
+                  $ mount --bind /sys /mnt/sys       <br>           
+              </code>
+            </li>
+            <li>
+              <p>Cambiar la raíz (Change Root) desde el sistema Live hacia el sistema que hay en la partición que hemos montado.</p>
+              <code>
+                  $ chroot /mnt
+              </code>
+            </li>
+            <li>
+              <p>Reinstalar el paquete grub-efi.</p>
+              <code>
+                $ apt-get install --reinstall grub-efi 
+              </code>
+            </li>
+            <li>
+              <span class="badge badge-warning">Importante:</span>
+              <p>Si el paso anterior diera error de conexión, se debe definir manualmente el servidor dns. Ejecutar los siguientes comandos y luego volver al paso 7.</p>
+              <code>
+                $ rm /etc/resolv.conf<br>
+                $ echo “nameserver 8.8.8.8” >> /etc/resolv.conf                
+              </code>
+            </li>
+            <li>
+              <p> Instalar y actualizar el grub.</p>
+              <code>
+                $ grub-install /dev/sda
+              </code>
+            </li>
+            <li>
+              <p>Salir de chroot y reiniciar.</p>
+              <code>
+                $ exit<br>
+                $ reboot                
+              </code>
+            </li>
+            <li>
+              <p>Luego del reinicio se iniciará debian-fai. A continuación se procede a actualizar el grub. Ejecutar en una terminal. </p>
+              <code>
+                $ update-grub
+              </code>
+            </li>
+          </ol>
+          <h2 id="BIOS">Instalación del grub en BIOS</h2>
+          <ol>
+            <li>
+              <p>Arrancar <strong>debian-fai</strong> en modo LIVE. A continuación, 
+                deberá identificar la partición donde se encuentra el sistema sistema raíz <strong>“/”</strong>. 
+                Siguiendo el ejemplo anterior: <strong> /dev/sda6</strong>.</p>
+            </li>
+            <li>
+              <p>Montar la partición raíz “/” de Linux.</p>
+              <code>
+                $ mount /dev/sda6 /mnt
+              </code>
+            </li>
+            <li>
+              <p>Enlazar directorios especiales de Linux dentro de la partición raíz que hemos montado.</p>
+              <code>
+                $ mount -t proc /proc /mnt/proc<br>
+                $ mount --bind /dev /mnt/dev<br>
+                $ mount --bind /dev/pts /mnt/dev/pts<br>
+                $ mount --bind /sys /mnt/sys                  
+              </code>
+            </li>
+            <li>
+              <p>Cambiar la raíz (Change Root) desde el sistema Live hacia el sistema que hay en la partición que hemos montado.</p>
+              <code>
+                $ chroot /mnt
+              </code>
+            </li>
+            <li>
+              <p>Instalar y actualizar el grub.</p>
+              <code>
+                $ grub-install /dev/sda
+              </code>
+            </li>
+            <li>
+              <p>Salir de chroot y reiniciar.</p>
+              <code>
+                $ exit<br>
+                $ reboot                
+              </code>
+            </li>
+            <li>
+              <p>Luego del reinicio se iniciará debian-fai. A continuación se procede a actualizar el grub. Ejecutar en una terminal.</p>
+              <code>
+                $ update-grub
+              </code>
+            </li>
+          </ol>
+          <p>Si decide instalar el sistema como único, puede proceder directamente haciendo doble click sobre el icono <strong>“Instalar Sistema”</strong> que se encuentra en el escritorio. En este momento, deberá elegir una de las siguientes opciones:</p>
+          <ol>
+            <li>Instalar debian-fai como sistema único.</li>
+            <li>Instalar debian-fai junto con otro sistema operativo, de manera que al momento de arrancar el equipo pueda elegir cual sistema operativo utilizar.</li>
+          </ol>
+          <!-- +++++++++++++++++++++++++++++++++ -->
+          
+          <!-- los botones de las guias-->
+          <div class="row">
+            <div class="col">
+             
+            </div>
+            <div class="col d-flex justify-content-end">
+              <a role="button" class="btn">
+                <i class="material-icons text-white">
+                  keyboard_arrow_right
+                </i>
+              </a>
+            </div>
+          </div>
+          <!-- -->
+        </div>
+    </div>
+    </div>
+    <footer>
+      
+    </footer>
+    <a href="#menu" class="btn btn-primary subir rounded" role="button" href="acceso-bios.html">
+        <i class="material-icons white">
+        arrow_upward
+        </i>
+    </a>
+</body>
+</html>
