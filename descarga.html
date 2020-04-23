@@ -88,17 +88,25 @@
                     <li>Ya tenemos listo nuestro pendrive con la última compilación disponible, listo para ser enchufado en cualquier pc que nos permita arrancar desde usb.</li>
                 </ol>
                 <p><span class="bg-white">luego de esto podremos reiniciar la PC. y continuar con la <a href="documentacion.html">instalación</a></span></p>
-            </div>
+                <img class="rounded mx-auto d-block" src="Media/unnamed.png" alt="">
+              </div>
           </div>
           <div class="row">
             <div class="col">
                 <h2><span class="bg-white">bootear en linux</span></h2>
                 <p><span class="bg-white">Para grabar en el pendrive, utilizar el comando “dd”:</span></p>
+                <p><spam class="bg-white">Primero se debe identificar el dispositivo USB con la aplicación “gparted” o el 
+                  ejecutando el comando “fdisk -l” como administrador por terminal.</spam></p>
+                <p><span class="bg-white">
+                  por ejemplo, si el pendrive fue reconocido como “/dev/sdb”, entonces el comando sería el siguiente:
+                </span></p>
                 <code class="bg-white">
                     $ dd if=/lugar/de/origen/debian-fai_v1-1.raw of=/dev/sdx bs=1M; sync
                 </code>
                 <p><span class="bg-white">donde sdx es el pendrive</span></p>
-                <p><span class="bg-white">para ver el progreso instalar previamente “pv”:</span></p>
+                <p><span class="bg-white">
+                  El proceso tarda varios minutos, se puede ver el progreso instalando previamente el paquete “pv”:
+                </span></p>
                 <code class="bg-white">
                     $ apt-get install pv <br>
                     $ dd if=/lugar/de/origen/debian-fai_v1-1.raw |pv|dd of=/dev/sdx bs=1M; sync

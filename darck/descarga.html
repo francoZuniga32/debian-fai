@@ -88,21 +88,29 @@
                     <li>Ya tenemos listo nuestro pendrive con la última compilación disponible, listo para ser enchufado en cualquier pc que nos permita arrancar desde usb.</li>
                 </ol>
                 <p><span>luego de esto podremos reiniciar la PC. y continuar con la <a href="documentacion.html">instalación</a></span></p>
+                <img class="rounded mx-auto d-block" src="../Media/unnamed.png" alt="">
             </div>
           </div>
           <div class="row">
             <div class="col">
-                <h2><span>bootear en linux</span></h2>
-                <p><span>Para grabar en el pendrive, utilizar el comando “dd”:</span></p>
-                <code>
-                    $ dd if=/lugar/de/origen/debian-fai_v1-1.raw of=/dev/sdx bs=1M; sync
-                </code>
-                <p><span>donde sdx es el pendrive</span></p>
-                <p><span>para ver el progreso instalar previamente “pv”:</span></p>
-                <code>
-                    $ apt-get install pv <br>
-                    $ dd if=/lugar/de/origen/debian-fai_v1-1.raw |pv|dd of=/dev/sdx bs=1M; sync
-                </code>
+              <h2><span>bootear en linux</span></h2>
+              <p><span>Para grabar en el pendrive, utilizar el comando “dd”:</span></p>
+              <p><span>Primero se debe identificar el dispositivo USB con la aplicación “gparted” o el 
+                ejecutando el comando “fdisk -l” como administrador por terminal.</span></p>
+              <p><span>
+                por ejemplo, si el pendrive fue reconocido como “/dev/sdb”, entonces el comando sería el siguiente:
+              </span></p>
+              <code>
+                  $ dd if=/lugar/de/origen/debian-fai_v1-1.raw of=/dev/sdx bs=1M; sync
+              </code>
+              <p><span>donde sdx es el pendrive</span></p>
+              <p><span>
+                El proceso tarda varios minutos, se puede ver el progreso instalando previamente el paquete “pv”:
+              </span></p>
+              <code>
+                  $ apt-get install pv <br>
+                  $ dd if=/lugar/de/origen/debian-fai_v1-1.raw |pv|dd of=/dev/sdx bs=1M; sync
+              </code>
             </div>
           </div>
     </div>
