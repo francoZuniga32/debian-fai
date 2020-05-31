@@ -119,8 +119,8 @@ i{
 
 /* tamaño de los iconos */
 
-.material-icons.md-18 { 
-    font-size: 20px; 
+.material-icons.md-18 {
+    font-size: 20px;
 }
 
 /* entrada */
@@ -192,4 +192,14 @@ footer p{
     .contenido img{
         width: 50%;
     }
+}
+
+/* Logo nuevo */
+.logo_debian{
+      font-family: 'chalet-londonnineteenseventRg', monospace !important;
+      color: rgb(153, 153, 153);
+}
+.logo_fai{
+      font-family: 'chalet-londonnineteenseventRg', monospace !important;
+      color: rgb(0, 64, 255);
 }
