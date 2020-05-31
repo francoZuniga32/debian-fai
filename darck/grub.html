@@ -17,11 +17,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../Media/webfontkit/stylesheet.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark" id="menu">
         <a class="navbar-brand" href="#">
-          <img src="../Media/logo.png" alt="" width="30px">Debian-FAI
+          <img src="../Media/logo_1.svg" alt="" width="30px"> <span class="logo_debian">Debian-</span><span class="logo_fai">FAI</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -48,7 +49,7 @@
         </div>
       </nav>
     <div class="container-fluid centro">
-      <div class="row">        
+      <div class="row">
         <ul class="nav flex-column col-sm-3 listaguion mayor border-right">
           <h3>Manual</h3>
           <hr>
@@ -144,23 +145,23 @@
               </div>
           </div>
           <!---->
-          
+
           <!-- EL CONTENIDO VA AQUI -->
-          
+
           <h1>GRUB</h1>
           <hr>
           <h2 id="UEFI">Instalación del grub en UEFI</h2>
-          <p>Hace algunos años apareció el firmware UEFI reemplazando al firmware BIOS 
+          <p>Hace algunos años apareció el firmware UEFI reemplazando al firmware BIOS
             y sus limitaciones (discos de máximo 2TB, máximo 4 particiones, falta de espacio en el
-             MBR para el cargador de arranque, etc.). Todas las motherboard actuales tienen firmware UEFI y 
+             MBR para el cargador de arranque, etc.). Todas las motherboard actuales tienen firmware UEFI y
             la mayoría es compatible con el modo BIOS (normalmente llamado CSM o Legacy).</p>
-          <p>Si se va a instalar debian-fai como sistema único, simplemente deberá habilitar 
-            la compatibilidad con el modo BIOS. Pero, si desea conservar el sistema operativo actual 
+          <p>Si se va a instalar debian-fai como sistema único, simplemente deberá habilitar
+            la compatibilidad con el modo BIOS. Pero, si desea conservar el sistema operativo actual
             con el firmware en modo UEFI, procederemos con los siguientes pasos:
             </p>
           <ol>
             <li>
-              <p>Lo primero es arrancar debian-fai en modo LIVE. A continuación, deberá identificar la partición EFI, usando la aplicación GParted. 
+              <p>Lo primero es arrancar debian-fai en modo LIVE. A continuación, deberá identificar la partición EFI, usando la aplicación GParted.
                 Se trata de una partición FAT32, con la marca de arranque “boot”, que normalmente tiene la etiqueta “EFI”. </p>
               <p><span class="badge badge-warning">Importante:</span> si se daña esta partición, la computadora no arrancará y habrá que reparar la partición.</p>
               <p>En la imagen anterior, la partición EFI es “/dev/sda1” y el sistema debian-fai se encuentra en “/dev/sda6”. Identificado esto, debe proceder a instalar el Grub, utilizando el método chroot (CHange ROOT).</p>
@@ -190,7 +191,7 @@
                   $ mount -t proc /proc /mnt/proc <br>
                   $ mount --bind /dev /mnt/dev<br>
                   $ mount --bind /dev/pts /mnt/dev/pts<br>
-                  $ mount --bind /sys /mnt/sys       <br>           
+                  $ mount --bind /sys /mnt/sys       <br>
               </code>
             </li>
             <li>
@@ -202,7 +203,7 @@
             <li>
               <p>Reinstalar el paquete grub-efi.</p>
               <code>
-                $ apt-get install --reinstall grub-efi 
+                $ apt-get install --reinstall grub-efi
               </code>
             </li>
             <li>
@@ -210,7 +211,7 @@
               <p>Si el paso anterior diera error de conexión, se debe definir manualmente el servidor dns. Ejecutar los siguientes comandos y luego volver al paso 7.</p>
               <code>
                 $ rm /etc/resolv.conf<br>
-                $ echo “nameserver 8.8.8.8” >> /etc/resolv.conf                
+                $ echo “nameserver 8.8.8.8” >> /etc/resolv.conf
               </code>
             </li>
             <li>
@@ -223,7 +224,7 @@
               <p>Salir de chroot y reiniciar.</p>
               <code>
                 $ exit<br>
-                $ reboot                
+                $ reboot
               </code>
             </li>
             <li>
@@ -236,8 +237,8 @@
           <h2 id="BIOS">Instalación del grub en BIOS</h2>
           <ol>
             <li>
-              <p>Arrancar <strong>debian-fai</strong> en modo LIVE. A continuación, 
-                deberá identificar la partición donde se encuentra el sistema sistema raíz <strong>“/”</strong>. 
+              <p>Arrancar <strong>debian-fai</strong> en modo LIVE. A continuación,
+                deberá identificar la partición donde se encuentra el sistema sistema raíz <strong>“/”</strong>.
                 Siguiendo el ejemplo anterior: <strong> /dev/sda6</strong>.</p>
             </li>
             <li>
@@ -252,7 +253,7 @@
                 $ mount -t proc /proc /mnt/proc<br>
                 $ mount --bind /dev /mnt/dev<br>
                 $ mount --bind /dev/pts /mnt/dev/pts<br>
-                $ mount --bind /sys /mnt/sys                  
+                $ mount --bind /sys /mnt/sys
               </code>
             </li>
             <li>
@@ -271,7 +272,7 @@
               <p>Salir de chroot y reiniciar.</p>
               <code>
                 $ exit<br>
-                $ reboot                
+                $ reboot
               </code>
             </li>
             <li>
@@ -287,11 +288,11 @@
             <li>Instalar debian-fai junto con otro sistema operativo, de manera que al momento de arrancar el equipo pueda elegir cual sistema operativo utilizar.</li>
           </ol>
           <!-- +++++++++++++++++++++++++++++++++ -->
-          
+
           <!-- los botones de las guias-->
           <div class="row">
             <div class="col">
-             
+
             </div>
             <div class="col d-flex justify-content-end">
               <a role="button" class="btn">
@@ -306,7 +307,7 @@
     </div>
     </div>
     <footer>
-      
+
     </footer>
     <a href="#menu" class="btn btn-primary subir rounded" role="button" href="acceso-bios.html">
         <i class="material-icons white">
