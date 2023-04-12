@@ -1,503 +1,889 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Debian-FAI</title>
-    <link rel="icon" type="image/png" href="Media/icono.png">
+    <link rel="icon" type="image/png" href="Media/icono.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link href="Media/webfontkit/stylesheet.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
-    <link href="Media/webfontkit/stylesheet.css" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <!-- slik -->
-</head>
-<body class="">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">
-          <img src="Media/logo_1.svg" alt="" width="30px"> <span class="logo_debian">Debian-</span><span class="logo_fai">FAI</span>
+    
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css" />
+    <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+    <script src="JS/main.js"></script>
+  </head>
+
+  <body id="body" class="">
+    <nav class="bg-white border-gray-200 px-2 md:px-4 py-2.5 dark:bg-gray-900">
+      <div
+        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+      >
+        <a href="https://flowbite.com" class="flex items-center">
+          <img src="Media/logo_1.svg" alt="" width="30px" />
+          <span
+            class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+            >Debian-FAI</span
+          >
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto justify-content-end">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
+        <div class="flex items-center md:order-2">
+          <a
+            href="https://t.me/Montun"
+            target="_blank"
+            class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+          >
+            <img
+              src="Media/telegram.png"
+              class="align-self-center mr-3"
+              alt="..."
+              width="20px"
+            />
+          </a>
+          <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+              <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+              <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+          </button>
+          <button
+            data-collapse-toggle="mega-menu-icons"
+            type="button"
+            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="mega-menu-icons"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              aria-hidden="true"
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          id="mega-menu-icons"
+          class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
+        >
+          <ul
+            class="flex flex-col mt-4 text-sm font-medium md:flex-row md:space-x-8 md:mt-0"
+          >
+            <li>
+              <a
+                href="index.html"
+                class="block flex flex-row py-2 pr-4 pl-3 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  ></path>
+                </svg>
+                Inicio
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="documentacion.html">Documentacion</a>
+            <li>
+              <a
+                href="documentacion.html"
+                class="block flex flex-row py-2 pr-4 pl-3 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  ></path>
+                </svg>
+                Documentacion
+              </a>
             </li>
-            <li class="nav-item">
-              <a href="descarga.html" class="nav-link">Descargas</a>
+            <li>
+              <a
+                href="descarga.html"
+                class="block flex flex-row py-2 pr-4 pl-3 text-blue-600 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                aria-current="page"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                  ></path>
+                </svg>
+                Descargar
+              </a>
             </li>
           </ul>
-          <div>
-            <a type="button" class="btn btn-light" href="darck/index.html">
-              <i class="material-icons">
-                brightness_6
-                </i>
-              </a>
-          </div>
         </div>
-      </nav>
-      <div class="container">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="Media/carrucel1.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="Media/carrucel2.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="Media/carrucel3.png" class="d-block w-100" alt="...">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+      </div>
+    </nav>
+    <div class="container mx-auto columns-1">
+      <div class="flex flex-row mt-6">
+        <div
+          class="basis-1/2 m-12 p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <h5
+              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Debian FAI
+            </h5>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Debian FAI es un sistema operativo linux, basado en la distribucion Debian, con el fin de probeer un conjunto de herramientas para la comunidad de la facultad de informatica. 
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-rose-500 rounded-lg hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Mas Informacion
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
           </a>
         </div>
-        <br>
-        <div class="row">
-          <div class="col-sm mb-5 hvr-grow rounded-lg">
-                <div class="card">
-                  <span class="text-center" style="background-color: rgba(235, 87, 87, 0.73);">Debian-fai</span>
-                  <p style="margin: 5%;">
-                    Enfocada a estudiantes de las carreras, con todas las aplicaciones necesarias para las materias de la misma.
-                  </p>
-                  <ul>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      IDEs de Programación
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      Suite ofimática de Libreoffice
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      Reproductor de Audio y Video
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      Editores gráficos (GIMP. Inkscape, etc’)
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      Aplicaciones para Internet (Navegadores, Visores Remotos, etc‘)
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      Utilidades de Sistema (Wine, GParted, etc’)
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                        check_circle_outline
-                      </i>
-                      kernel 4.9.0-11-amd64
-                    </li>
-                    <li>
-                      <i class="material-icons text-danger">
-                        highlight_off
-                      </i>Librerías de Machine Learning (Jupiter, Pandas, etc’)
-                    </li>
-                  </ul>
-                </div>
-          </div>
-          <div class="col-sm mb-5 hvr-grow rounded-lg">
-                <div class="card">
-                  <span class="text-center" style="background-color: #F9B376;">Debian-fai V2</span>
-                  <p style="margin: 5%;">
-                    Enfocada a estudiantes de las carreras,
-                    con todas las aplicaciones necesarias para las materias de la carrera,
-                    con librerias para el desarrollo de ML.
-                  </p>
-                  <ul>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      IDEs de Programación
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      Suite ofimática de Libreoffice
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      Reproductor de Audio y Video
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      Editores gráficos (GIMP. Inkscape, etc’)
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      Aplicaciones para Internet (Navegadores, Visores Remotos, etc‘)
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      Utilidades de Sistema (Wine, GParted, etc’)
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                        check_circle_outline
-                      </i>
-                      kernel 4.9.0-11-amd64
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                        highlight_off
-                      </i>Librerías de Machine Learning (Jupiter, Pandas, etc’)
-                    </li>
-                  </ul>
-                </div>
-          </div>
-          <div class="col-sm mb-5 hvr-grow rounded-lg">
-                <div class="card">
-                  <span class="text-center" style="background-color: rgba(101, 198, 255, 0.73);">Debian-fai Lite</span>
-                  <p style="margin: 5%;">
-                    Enfocada a estudiantes de las carreras, con una reducida capacidad computacional (pc de 1gb de ram, etc').
-                  </p>
-                  <ul>
-                    <li>
-                      <i class="material-icons text-warning">
-                      check_circle_outline
-                      </i>
-                      IDEs de Programación
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      Suite ofimática de Libreoffice
-                    </li>
-                    <li>
-                      <i class="material-icons text-warning">
-                      check_circle_outline
-                      </i>
-                      Reproductor de Audio y Video
-                    </li>
-                    <li>
-                      <i class="material-icons text-warning">
-                      check_circle_outline
-                      </i>
-                      Editores gráficos (GIMP. Inkscape, etc’)
-                    </li>
-                    <li>
-                      <i class="material-icons text-warning">
-                      check_circle_outline
-                      </i>
-                      Aplicaciones para Internet (Navegadores, Visores Remotos, etc‘)
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                      check_circle_outline
-                      </i>
-                      Utilidades de Sistema (Wine, GParted, etc’)
-                    </li>
-                    <li>
-                      <i class="material-icons text-success">
-                        check_circle_outline
-                      </i>
-                      kernel 4.9.0-11-amd64
-                    </li>
-                    <li>
-                      <i class="material-icons text-danger">
-                        check_circle_outline
-                      </i>
-                      Librerías de Machine Learning (Jupiter, Pandas, etc’)
-                    </li>
-                  </ul>
-                </div>
-          </div>
+        <div class="basis-1/2">
+          <img src="./Media/index/pantalla1.png" alt="" width="300px">
         </div>
+      </div>
+      <div class="flex flex-row justify-end mt-6">
+        <div class="basis-1/2">
+          <img src="./Media/index/pantall2.png" alt="" width="300px">
+        </div>
+        <div
+          class="basis-1/2 m-6 text-right p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <h5
+              class="mb-2 text-right text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Debian FAI V2
+            </h5>
+          </a>
+          <p
+            class="mb-3 text-right font-normal text-gray-700 dark:text-gray-400"
+          >
+            Here are the biggest enterprise technology acquisitions of 2021 so
+            far, in reverse chronological order.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-cyan-400 rounded-lg hover:bg-cyan-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Mas Informacion
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-row mt-6">
+        <div
+          class="basis-1/2 m-6 p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <h5
+              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Debian FAI - Lite
+            </h5>
+          </a>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Here are the biggest enterprise technology acquisitions of 2021 so
+            far, in reverse chronological order.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Mas Informacion
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <div class="basis-1/2">
+          <img src="./Media/index/pantalla3.png" alt="" width="300px">
+        </div>
+      </div>
 
-        <h2><span style="background-color: rgba(235, 87, 87, 0.73);;">¿Qué es Debian-fai?</span></h2 >
-        <div class="row">
-          <div class="col">
-            <span class="bg-white">
-              Debian-fai es una distribución de linux basada en Debian Stretch (64bit) con el entorno de escritorio MATE,
-            personalizada para la Facultad de Informática.
-            Contiene gran parte de las aplicaciones necesarias para las materias de programación y también para uso general.
-            </span>
+      <div class="flex flex-row justify-center mt-6">
+        <div class="p-6 bg-white dark:bg-gray-800 dark:border-gray-700">
+          <a href="#">
+            <h5
+              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              Newsletter
+            </h5>
+          </a>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Suscribete para obtener mas inforamcion sobre Debian fai
+          </p>
+          <div class="mb-2">
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Email:
+            </label>
+            <input
+              type="email"
+              id="email"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder=""
+              required
+            />
           </div>
-          <div class="col img">
-            <img src="" alt="">
+          <a
+            href="#"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Suscribirse
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-row justify-center">
+      <div class="carrucel">
+        <div><img src="Media/carrucel/IMG_7222_result.png" width="200px" alt=""></div>
+        <div><img src="Media/carrucel/IMG_7223_result.png" width="200px" alt=""></div>
+        <div><img src="Media/carrucel/IMG_7225_result.png" width="200px" alt=""></div>
+        <div><img src="Media/carrucel/IMG_7227_result.png" width="200px" alt=""></div>
+        <div><img src="Media/carrucel/IMG_7229_result.png" width="150px" alt=""></div>
+        <div><img src="Media/carrucel/IMG_7242_result.png" width="200px" alt=""></div>
+        <div><img src="Media/carrucel/IMG_7251_result.png" width="200px" alt=""></div>
+        <div><img src="Media/carrucel/IMG_7252_result.png" width="200px" alt=""></div>
+        <div><img src="Media/carrucel/IMG_7255_result.png" width="200px" alt=""></div>
+        <div><img src="Media/carrucel/IMG_7259_result.png" width="200px" alt=""></div>
+      </div>
+    </div>
+    <footer
+      class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800"
+    >
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+        >© 2022
+        <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>.
+        All Rights Reserved.
+      </span>
+      <ul
+        class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+      >
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+        </li>
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline">Contact</a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- <div class="container">
+      <br />
+      <div class="row">
+        <div class="col-sm mb-5 hvr-grow rounded-lg">
+          <div class="card">
+            <span
+              class="text-center"
+              style="background-color: rgba(235, 87, 87, 0.73)"
+              >Debian-fai</span
+            >
+            <p style="margin: 5%">
+              Enfocada a estudiantes de las carreras, con todas las aplicaciones
+              necesarias para las materias de la misma.
+            </p>
+            <ul>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                IDEs de Programación
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                Suite ofimática de Libreoffice
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                Reproductor de Audio y Video
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                Editores gráficos (GIMP. Inkscape, etc’)
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                Aplicaciones para Internet (Navegadores, Visores Remotos, etc‘)
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                Utilidades de Sistema (Wine, GParted, etc’)
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                kernel 4.9.0-11-amd64
+              </li>
+              <li>
+                <i class="material-icons text-danger"> highlight_off </i
+                >Librerías de Machine Learning (Jupiter, Pandas, etc’)
+              </li>
+            </ul>
           </div>
         </div>
-        <h2><span style="background-color: #6DAB87;">Aplicaciones Integradas</span></h2>
-        <div class="row">
-          <div class="col img">
-            <img src="Media/carrucel3.png" alt="" width="500px;">
-          </div>
-          <div class="col">
-            <h5><span class="bg-white">Oficina</span></h5>
-            <span class="bg-white">
-              <strong>LibreOffice</strong> – Suite de oficina potente y libre.<br>
-              <strong>Atril</strong> – Visor de documentos pdf.<br>
-              <strong>LyX</strong> – Procesador de documentos.
-            </span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h5><span class="bg-white">Sonido y Video:</span></h5>
-            <span class="bg-white">
-              <strong>VLC</strong> – Reproductor multimedia.<br>
-              <strong>Mplayer</strong> – Reproductor multimedia.<br>
-              <strong>Brasero</strong> – Aplicación para grabar CD / DVD.
-            </span>
-          </div>
-          <div class="col img">
-            <img src="Media/carrucel1.png" alt="" width="500px;">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col img">
-            <img src="Media/carrucel2.png" alt="" width="500px">
-          </div>
-          <div class="col">
-            <h5><span class="bg-white">Gráficos:</span></h5>
-            <span class="bg-white">
-              <strong>Dia</strong> – Aplicación para graficar diagramas de estructura.<br>
-              <strong>Inkscape</strong> – Software de vectores gráficos de calidad profesional.<br>
-              <strong>Gimp</strong> – Programa de manipulación de imágenes.<br>
-              <strong>OpenScad</strong> – Permite crear objetos tridimensionales a partir de un script.<br>
-              <strong>Simple Scan</strong> – Aplicación para escanear documentos.<br>
-              <strong>Camorama</strong> – Visor webcam.
-            </span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h5><span class="bg-white">Internet:</span></h5>
-            <span class="bg-white">
-              <strong>Google Chrome, Chromium y FireFox</strong> – Navegadores web.<br>
-              <strong>Virt-Viewer</strong> – Visor Remoto.<br>
-              <strong>Dropbox</strong> – Servicio de almacenamiento de archivos.<br>
-              <strong>Wireshark</strong> – Aplicación para analizar el tráfico red en tiempo real.<br>
-              <strong>qbittorrent</strong> – Gestor de descargas torrents.<br>
-              <strong>FileZilla</strong> – gestor de FTP.
-            </span>
-          </div>
-          <div class="col img">
-            <img src="Media/carrucel4.png" alt="" width="500px">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col img">
-            <img src="Media/carrucel5.png" alt="" width="500px">
-          </div>
-          <div class="col">
-            <h5><span class="bg-white">Programación:</span></h5>
-            <span class="bg-white">
-              <strong>Netbeans IDE</strong> – Entorno de desarrollo.<br>
-              <strong>JavaFX SceneBuilder</strong> – Editor para crear archivos FXML.<br>
-              <strong>Eclipse IDE</strong> – Entorno de desarrollo.<br>
-              <strong>GNU Emacs IDE</strong> – Editor extensible, personalizable, auto-documentado y de tiempo real.<br>
-              <strong>Geany</strong> – Editor de texto.<br>
-              <strong>DrRacket</strong> – Entorno de desarrollo.<br>
-              <strong>Pharo</strong> – Entorno de desarrollo para programación orientada a objetos.<br>
-              <strong>Squeak</strong> – Entorno de desarrollo para programación orientada a objetos.<br>
-              <strong>Arduino IDE</strong> – Entorno de desarrollo para arduino.<br>
-              <strong>Free Pascal</strong> – Compilador de Pascal.<br>
-              <strong>Haskell Platform</strong> – Distribución de Haskell.partir de un script.<br>
-              <strong>Simple Scan</strong> – Aplicación para escanear documentos.<br>
-              <strong>Camorama</strong> – Visor webcam.
-            </span>
+        <div class="col-sm mb-5 hvr-grow rounded-lg">
+          <div class="card">
+            <span class="text-center" style="background-color: #f9b376"
+              >Debian-fai V2</span
+            >
+            <p style="margin: 5%">
+              Enfocada a estudiantes de las carreras, con todas las aplicaciones
+              necesarias para las materias de la carrera, con librerias para el
+              desarrollo de ML.
+            </p>
+            <ul>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                IDEs de Programación
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                Suite ofimática de Libreoffice
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                Reproductor de Audio y Video
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                Editores gráficos (GIMP. Inkscape, etc’)
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                Aplicaciones para Internet (Navegadores, Visores Remotos, etc‘)
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                Utilidades de Sistema (Wine, GParted, etc’)
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                kernel 4.9.0-11-amd64
+              </li>
+              <li>
+                <i class="material-icons text-success"> highlight_off </i
+                >Librerías de Machine Learning (Jupiter, Pandas, etc’)
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <h5><span class="bg-white">Utilidades:</span></h5>
-            <span class="bg-white">
-              <strong>Synaptic</strong> – Gestor de software.<br>
-              <strong>Gnome-system-tools</strong> – Herramienta de administración de usuarios y grupos.<br>
-              <strong>System-config-printer</strong> – Interfaz gráfica para configurar impresoras.<br>
-              <strong>GParted</strong> – Editor de particiones de disco.<br>
-              <strong>Hplip</strong> – Aplicación desarrollada por HP para imprimir, escanear y enviar faxes con impresoras láser y de inyección de tinta HP en Linux.<br>
-              <strong>Clonezilla</strong> – Aplicación para clonación de discos y particiones.<br>
-              <strong>Wine</strong> – Aplicación capaz de ejecutar una capa de compatibilidad de Windows en Linux, MacOS y BSD.<br>
-              <strong>Systemback</strong> – Aplicación que facilita la creación de copias de seguridad del sistema gestionando los archivos de configuración de los usuarios.<br>
-              <strong>Utilidades varias de redes y administración</strong>: mc, nload, tcpdump, iperf, iotop, nmap, htop, openvpn, screen, speedtest-cli, filezilla
-            </span>
-          </div>
-          <div class="col img">
-            <img src="Media/carrucel6.png" alt="" width="500px">
-          </div>
-        </div>
-        <h2><span style="background-color: #F9B376;">Debian-fai V2!!</span></h2>
-        <div class="row">
-          <div class="col">
-            <h5><span class="bg-white">Sistema:</span></h5>
-            <span class="bg-white">
-              <strong>kernel 4.9.0-11-amd64</strong>
-              <br>
-              <strong>mtr, mdadm, ifenslave</strong>
-              <br>
-              <strong>Neofetch</strong>
-              <br>
-              <strong>python-tk, gdb, gdb-multiarch</strong>
-              <br>
-              <strong>recordmydesktop</strong>
-              <br>
-              <strong>guvcview</strong>
-              <br>
-              <strong>freerdp-x11-dbg</strong>
-            </span>
-          </div>
-          <div class="col img">
-            <img src="Media/sistema.png" alt="" width="500px">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col img">
-            <img src="Media/IA.png" alt="" width="500px">
-          </div>
-          <div class="col">
-            <h5><span class="bg-white">IA:</span></h5>
-            <span class="bg-white">
-              <strong>python-sklearn, python-pandas:</strong>Aprendizaje automático en Python, Biblioteca de análisis de datos de Python
-              <br>
-              <strong>weka:</strong>Weka es un software de aprendizaje automático de código abierto
-              <br>
-            </span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h5><span class="bg-white">Internet:</span></h5>
-            <span class="bg-white">
-              <strong>wavemon:</strong>monitor Wi-Fi
-              <br>
-              <strong>LinSSID:</strong>escáner de redes wifi
-              <br>
-            </span>
-          </div>
-          <div class="col img">
-            <img src="Media/Internet.png" alt="" width="500px">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col img">
-            <img src="Media/programacion.png" alt="" width="500px">
-          </div>
-          <div class="col">
-            <h5><span class="bg-white">Programacion:</span></h5>
-            <span class="bg-white">
-              <strong>Eclipse PDT:</strong>Entorno de desarrollo para PHP.
-              <br>
-              <strong>visual studio code:</strong>Editor de codigo
-              <br>
-              <strong>docker:</strong>Automatiza el despliegue de aplicaciones dentro de contenedores de software
-              <br>
-              <strong>gitkraken:</strong>Cliente GIT
-              <br>
-              <strong>JupyterNotebook:</strong>Editor de documentacion de software
-              <br>
-              <strong>apache2 php mysql:</strong>Servidor web apache con php y gestor de base de datos mysql
-              <br>
-              <strong>nodejs, packete:</strong>entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome.<br>
-            </span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h5><span class="bg-white">Oficina:</span></h5>
-            <span class="bg-white">
-              <strong>wxmaxima:</strong>Interfaz basada en documentos para el sistema de álgebra computacional Maxima
-            </span>
-          </div>
-          <div class="col img">
-            <img src="Media/oficina.png" alt="" width="500px">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col img">
-            <img src="Media/utilidades.png" alt="" width="500px">
-          </div>
-          <div class="col">
-              <h5><span class="bg-white">Utilidades:</span></h5>
-              <span class="bg-white">
-                <strong>clusterssh:</strong>Interactuar en varias sesiones SSH a la vez y ejecutar comandos de forma simultánea
-                <br>
-                <strong>bridge-utils:</strong>contiene una utilidad necesaria para crear y administrar dispositivos bridge
-                <br>
-                <strong>gnome-boxes:</strong>Una sencilla aplicación de GNOME para ver, acceder y administrar sistemas remotos y virtuales
-                <br>
-              </span>
+        <div class="col-sm mb-5 hvr-grow rounded-lg">
+          <div class="card">
+            <span
+              class="text-center"
+              style="background-color: rgba(101, 198, 255, 0.73)"
+              >Debian-fai Lite</span
+            >
+            <p style="margin: 5%">
+              Enfocada a estudiantes de las carreras, con una reducida capacidad
+              computacional (pc de 1gb de ram, etc').
+            </p>
+            <ul>
+              <li>
+                <i class="material-icons text-warning">
+                  check_circle_outline
+                </i>
+                IDEs de Programación
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                Suite ofimática de Libreoffice
+              </li>
+              <li>
+                <i class="material-icons text-warning">
+                  check_circle_outline
+                </i>
+                Reproductor de Audio y Video
+              </li>
+              <li>
+                <i class="material-icons text-warning">
+                  check_circle_outline
+                </i>
+                Editores gráficos (GIMP. Inkscape, etc’)
+              </li>
+              <li>
+                <i class="material-icons text-warning">
+                  check_circle_outline
+                </i>
+                Aplicaciones para Internet (Navegadores, Visores Remotos, etc‘)
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                Utilidades de Sistema (Wine, GParted, etc’)
+              </li>
+              <li>
+                <i class="material-icons text-success">
+                  check_circle_outline
+                </i>
+                kernel 4.9.0-11-amd64
+              </li>
+              <li>
+                <i class="material-icons text-danger"> check_circle_outline </i>
+                Librerías de Machine Learning (Jupiter, Pandas, etc’)
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+
+      <h2>
+        <span style="background-color: rgba(235, 87, 87, 0.73)"
+          >¿Qué es Debian-fai?</span
+        >
+      </h2>
+      <div class="row">
+        <div class="col">
+          <span class="bg-white">
+            Debian-fai es una distribución de linux basada en Debian Stretch
+            (64bit) con el entorno de escritorio MATE, personalizada para la
+            Facultad de Informática. Contiene gran parte de las aplicaciones
+            necesarias para las materias de programación y también para uso
+            general.
+          </span>
+        </div>
+        <div class="col img">
+          <img src="" alt="" />
+        </div>
+      </div>
+      <h2>
+        <span style="background-color: #6dab87">Aplicaciones Integradas</span>
+      </h2>
+      <div class="row">
+        <div class="col img">
+          <img src="Media/carrucel3.png" alt="" width="500px;" />
+        </div>
+        <div class="col">
+          <h5><span class="bg-white">Oficina</span></h5>
+          <span class="bg-white">
+            <strong>LibreOffice</strong> – Suite de oficina potente y libre.<br />
+            <strong>Atril</strong> – Visor de documentos pdf.<br />
+            <strong>LyX</strong> – Procesador de documentos.
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5><span class="bg-white">Sonido y Video:</span></h5>
+          <span class="bg-white">
+            <strong>VLC</strong> – Reproductor multimedia.<br />
+            <strong>Mplayer</strong> – Reproductor multimedia.<br />
+            <strong>Brasero</strong> – Aplicación para grabar CD / DVD.
+          </span>
+        </div>
+        <div class="col img">
+          <img src="Media/carrucel1.png" alt="" width="500px;" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col img">
+          <img src="Media/carrucel2.png" alt="" width="500px" />
+        </div>
+        <div class="col">
+          <h5><span class="bg-white">Gráficos:</span></h5>
+          <span class="bg-white">
+            <strong>Dia</strong> – Aplicación para graficar diagramas de
+            estructura.<br />
+            <strong>Inkscape</strong> – Software de vectores gráficos de calidad
+            profesional.<br />
+            <strong>Gimp</strong> – Programa de manipulación de imágenes.<br />
+            <strong>OpenScad</strong> – Permite crear objetos tridimensionales a
+            partir de un script.<br />
+            <strong>Simple Scan</strong> – Aplicación para escanear
+            documentos.<br />
+            <strong>Camorama</strong> – Visor webcam.
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5><span class="bg-white">Internet:</span></h5>
+          <span class="bg-white">
+            <strong>Google Chrome, Chromium y FireFox</strong> – Navegadores
+            web.<br />
+            <strong>Virt-Viewer</strong> – Visor Remoto.<br />
+            <strong>Dropbox</strong> – Servicio de almacenamiento de
+            archivos.<br />
+            <strong>Wireshark</strong> – Aplicación para analizar el tráfico red
+            en tiempo real.<br />
+            <strong>qbittorrent</strong> – Gestor de descargas torrents.<br />
+            <strong>FileZilla</strong> – gestor de FTP.
+          </span>
+        </div>
+        <div class="col img">
+          <img src="Media/carrucel4.png" alt="" width="500px" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col img">
+          <img src="Media/carrucel5.png" alt="" width="500px" />
+        </div>
+        <div class="col">
+          <h5><span class="bg-white">Programación:</span></h5>
+          <span class="bg-white">
+            <strong>Netbeans IDE</strong> – Entorno de desarrollo.<br />
+            <strong>JavaFX SceneBuilder</strong> – Editor para crear archivos
+            FXML.<br />
+            <strong>Eclipse IDE</strong> – Entorno de desarrollo.<br />
+            <strong>GNU Emacs IDE</strong> – Editor extensible, personalizable,
+            auto-documentado y de tiempo real.<br />
+            <strong>Geany</strong> – Editor de texto.<br />
+            <strong>DrRacket</strong> – Entorno de desarrollo.<br />
+            <strong>Pharo</strong> – Entorno de desarrollo para programación
+            orientada a objetos.<br />
+            <strong>Squeak</strong> – Entorno de desarrollo para programación
+            orientada a objetos.<br />
+            <strong>Arduino IDE</strong> – Entorno de desarrollo para
+            arduino.<br />
+            <strong>Free Pascal</strong> – Compilador de Pascal.<br />
+            <strong>Haskell Platform</strong> – Distribución de Haskell.partir
+            de un script.<br />
+            <strong>Simple Scan</strong> – Aplicación para escanear
+            documentos.<br />
+            <strong>Camorama</strong> – Visor webcam.
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5><span class="bg-white">Utilidades:</span></h5>
+          <span class="bg-white">
+            <strong>Synaptic</strong> – Gestor de software.<br />
+            <strong>Gnome-system-tools</strong> – Herramienta de administración
+            de usuarios y grupos.<br />
+            <strong>System-config-printer</strong> – Interfaz gráfica para
+            configurar impresoras.<br />
+            <strong>GParted</strong> – Editor de particiones de disco.<br />
+            <strong>Hplip</strong> – Aplicación desarrollada por HP para
+            imprimir, escanear y enviar faxes con impresoras láser y de
+            inyección de tinta HP en Linux.<br />
+            <strong>Clonezilla</strong> – Aplicación para clonación de discos y
+            particiones.<br />
+            <strong>Wine</strong> – Aplicación capaz de ejecutar una capa de
+            compatibilidad de Windows en Linux, MacOS y BSD.<br />
+            <strong>Systemback</strong> – Aplicación que facilita la creación de
+            copias de seguridad del sistema gestionando los archivos de
+            configuración de los usuarios.<br />
+            <strong>Utilidades varias de redes y administración</strong>: mc,
+            nload, tcpdump, iperf, iotop, nmap, htop, openvpn, screen,
+            speedtest-cli, filezilla
+          </span>
+        </div>
+        <div class="col img">
+          <img src="Media/carrucel6.png" alt="" width="500px" />
+        </div>
+      </div>
+      <h2><span style="background-color: #f9b376">Debian-fai V2!!</span></h2>
+      <div class="row">
+        <div class="col">
+          <h5><span class="bg-white">Sistema:</span></h5>
+          <span class="bg-white">
+            <strong>kernel 4.9.0-11-amd64</strong>
+            <br />
+            <strong>mtr, mdadm, ifenslave</strong>
+            <br />
+            <strong>Neofetch</strong>
+            <br />
+            <strong>python-tk, gdb, gdb-multiarch</strong>
+            <br />
+            <strong>recordmydesktop</strong>
+            <br />
+            <strong>guvcview</strong>
+            <br />
+            <strong>freerdp-x11-dbg</strong>
+          </span>
+        </div>
+        <div class="col img">
+          <img src="Media/sistema.png" alt="" width="500px" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col img">
+          <img src="Media/IA.png" alt="" width="500px" />
+        </div>
+        <div class="col">
+          <h5><span class="bg-white">IA:</span></h5>
+          <span class="bg-white">
+            <strong>python-sklearn, python-pandas:</strong>Aprendizaje
+            automático en Python, Biblioteca de análisis de datos de Python
+            <br />
+            <strong>weka:</strong>Weka es un software de aprendizaje automático
+            de código abierto
+            <br />
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5><span class="bg-white">Internet:</span></h5>
+          <span class="bg-white">
+            <strong>wavemon:</strong>monitor Wi-Fi
+            <br />
+            <strong>LinSSID:</strong>escáner de redes wifi
+            <br />
+          </span>
+        </div>
+        <div class="col img">
+          <img src="Media/Internet.png" alt="" width="500px" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col img">
+          <img src="Media/programacion.png" alt="" width="500px" />
+        </div>
+        <div class="col">
+          <h5><span class="bg-white">Programacion:</span></h5>
+          <span class="bg-white">
+            <strong>Eclipse PDT:</strong>Entorno de desarrollo para PHP.
+            <br />
+            <strong>visual studio code:</strong>Editor de codigo
+            <br />
+            <strong>docker:</strong>Automatiza el despliegue de aplicaciones
+            dentro de contenedores de software
+            <br />
+            <strong>gitkraken:</strong>Cliente GIT
+            <br />
+            <strong>JupyterNotebook:</strong>Editor de documentacion de software
+            <br />
+            <strong>apache2 php mysql:</strong>Servidor web apache con php y
+            gestor de base de datos mysql
+            <br />
+            <strong>nodejs, packete:</strong>entorno de ejecución para
+            JavaScript construido con el motor de JavaScript V8 de Chrome.<br />
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5><span class="bg-white">Oficina:</span></h5>
+          <span class="bg-white">
+            <strong>wxmaxima:</strong>Interfaz basada en documentos para el
+            sistema de álgebra computacional Maxima
+          </span>
+        </div>
+        <div class="col img">
+          <img src="Media/oficina.png" alt="" width="500px" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col img">
+          <img src="Media/utilidades.png" alt="" width="500px" />
+        </div>
+        <div class="col">
+          <h5><span class="bg-white">Utilidades:</span></h5>
+          <span class="bg-white">
+            <strong>clusterssh:</strong>Interactuar en varias sesiones SSH a la
+            vez y ejecutar comandos de forma simultánea
+            <br />
+            <strong>bridge-utils:</strong>contiene una utilidad necesaria para
+            crear y administrar dispositivos bridge
+            <br />
+            <strong>gnome-boxes:</strong>Una sencilla aplicación de GNOME para
+            ver, acceder y administrar sistemas remotos y virtuales
+            <br />
+          </span>
+        </div>
+      </div>
+    </div>
     <footer class="bg-white border-top">
       <div class="row">
         <div class="col-sm">
           <h5 class="text-center"><u>Autores</u></h5>
-          <p style="margin-left: 2%;">Desarrollador web: Franco Agustin Ojeda Zuñiga.</p>
-          <p style="margin-left: 2%;">Desarrolladores distro: Alejandro Mora, Luis Coralle.</p>
-          <p style="margin-left: 2%;">Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+          <p style="margin-left: 2%">
+            Desarrollador web: Franco Agustin Ojeda Zuñiga.
+          </p>
+          <p style="margin-left: 2%">
+            Desarrolladores distro: Alejandro Mora, Luis Coralle.
+          </p>
+          <p style="margin-left: 2%">
+            Icons made by
+            <a
+              href="https://www.flaticon.com/authors/pixel-perfect"
+              title="Pixel perfect"
+              >Pixel perfect</a
+            >
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon"
+              >www.flaticon.com</a
+            >
+          </p>
         </div>
         <div class="col-sm">
           <h5 class="text-center"><u>Grupos</u></h5>
-          <div class="media" style="margin-left: 2%;">
-            <img src="Media/fai-logo.png" class="align-self-center mr-3" alt="..." width="40px">
+          <div class="media" style="margin-left: 2%">
+            <img
+              src="Media/fai-logo.png"
+              class="align-self-center mr-3"
+              alt="..."
+              width="40px"
+            />
             <div class="media-body">
               <h5 class="mt-0">Facultad de Informática</h5>
             </div>
           </div>
-          <br>
-          <div class="media" style="margin-left: 2%;">
-            <img src="Media/montun-logo.png" class="align-self-center mr-3" alt="..." width="40px">
+          <br />
+          <div class="media" style="margin-left: 2%">
+            <img
+              src="Media/montun-logo.png"
+              class="align-self-center mr-3"
+              alt="..."
+              width="40px"
+            />
             <div class="media-body">
               <h5 class="mt-0">Montun</h5>
             </div>
           </div>
         </div>
-        <div class="col-sm ">
+        <div class="col-sm">
           <h5 class="text-center"><u>Contacto</u></h5>
           <a href="https://t.me/Montun">
-            <div class="media" style="margin-left: 2%;">
-              <img src="Media/telegram.png" class="align-self-center mr-3" alt="..." width="40px">
+            <div class="media" style="margin-left: 2%">
+              <img
+                src="Media/telegram.png"
+                class="align-self-center mr-3"
+                alt="..."
+                width="40px"
+              />
               <div class="media-body">
                 <h5 class="mt-0">Grupo de Telegram</h5>
               </div>
@@ -505,8 +891,16 @@
           </a>
         </div>
       </div>
-      <p class="text-center">
-      </p>
-</footer>
-</body>
+      <p class="text-center"></p>
+    </footer> -->
+    <script>
+      $(document).ready(function(){
+        $('.carrucel').slick({
+          slidesToShow: 4,
+         slidesToScroll: 4
+        });
+      });
+    </script>
+  </body>
+  
 </html>

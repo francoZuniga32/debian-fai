@@ -155,6 +155,10 @@ footer p{
     size: 9px;
 }
 
+.carrucel{
+    width: 90%;
+}
+
 @media (max-width: 769px){
     .img{
         display: none;
